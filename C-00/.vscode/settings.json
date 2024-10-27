@@ -1,0 +1,19 @@
+{
+    "files.associations": {
+        "stdio.h": "c",
+        "funcs.h": "c",
+        "conio.h": "c",
+        "typeinfo": "c",
+        "fcntl.h": "c",
+        "windows.h": "c",
+        "winuser.h": "c",
+        "cstdlib": "c",
+        "arraylist.h": "c",
+        "stdlib.h": "c",
+        "tests.h": "c",
+        "string.h": "c",
+        "errno.h": "c",
+        "arraylist2.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
+}
