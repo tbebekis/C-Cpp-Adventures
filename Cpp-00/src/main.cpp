@@ -3,31 +3,34 @@
 #include <string>
 #include <sstream>
 
-#include "./inc/funcs.hpp"
+#include "funcs.hpp"
 
 using namespace std;
 using namespace project;
 
-int main() {
-	stringstream SS;
+class Man
+{
+    int fV;
 
-	WriteLine("Hi there, this is a template C++ project");
+public:
+    Man(int V)
+    {
+        fV = V;
+    }
+    Man(Man &M)
+    {
+        fV = M.fV;
+    }
+};
 
-	string S = ReadString("Type a string"); 		
-	SS << "You typed: " << S;
-	WriteLine(SS.str());
-	
-	SS.str(""); 							// clear the stream	
-	
-	int i = ReadInteger("Type an integer");			
-	SS << "You typed: " << i;
-	WriteLine(SS.str()); 
+main()
+{
+    void SetWinConsoleToUtf8();
 
-#ifdef _WIN32 
-	WriteLine("Press a key to terminate");
-	cin.get();								// stop and wait for a keystroke
-	cin.get();
-#endif 
+    Man M1(2);
+    Man M2 = M1;
 
-	return 0;
+    KeepConsoleOpen();
+
+    return 0;
 }
